@@ -44,6 +44,20 @@
     <p>InSight is taking daily weather measurements (temperature, wind, pressure) on the surface of Mars at Elysium Planitia, a flat, smooth plain near Mars’ equator.</p>
     <p>This is only a part of InSight’s mission. <a href="https://mars.nasa.gov/insight/mission/overview/">Click here</a> to find out more.</p>
   </div>
+
+<!--  <div class="unit">-->
+<!--    <span>°C</span>-->
+<!--    <span>°F</span>-->
+<!--  </div>-->
+
+  <div class="unit">
+    <label for="cel">°C</label>
+    <input type="radio" name="unit" id="cel" checked>
+    <!-- When unit_toggle is clicked, checkbox needs to change  -->
+    <button class="unit__toggle"></button>
+    <label for="fah">°F</label>
+    <input type="radio" name="unit" id="fah">
+  </div>
 </main>
 
 <div class="previous-weather"></div>
