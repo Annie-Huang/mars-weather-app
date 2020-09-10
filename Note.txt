@@ -3,5 +3,7 @@ Creating a Mars Weather App - HTML & CSS part 1 (https://www.youtube.com/watch?v
 https://github.com/kevin-powell/Mars-Weather-App
 https://github.com/Annie-Huang/mars-weather-app
 
+https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+(Hiding Content Visually section)
 =============================================================
 C:\react\mars-weather-app>npm init -y
