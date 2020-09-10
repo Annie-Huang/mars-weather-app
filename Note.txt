@@ -5,4 +5,3 @@ https://github.com/Annie-Huang/mars-weather-app
 
 =============================================================
 C:\react\mars-weather-app>npm init -y
-
