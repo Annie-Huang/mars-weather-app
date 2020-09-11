@@ -86,6 +86,12 @@ a {
   font-size: var(--fs-xl);
 }
 
+.reading {
+  font-size: var(--fs-h1);
+  margin: 0;
+  color: var(--clr-gray);
+}
+
 .mars-current-weather {
   background: rgba(0,0,0,0.7);
   padding: 2em;
