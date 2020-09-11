@@ -100,9 +100,19 @@ a:hover {
 .date {
   grid-column: 1/2;
 }
+.date__day {
+  font-size: var(--fs-h2);
+  margin: 0;
+  color: var(--clr-gray);
+  font-weight: var(--fw-light);
+}
 
 .temp {
+  --border: solid 0.25em var(--clr-accent-dark);
   grid-column: 2/3;
+  border-left: var(--border);
+  border-right: var(--border);
+  padding: 0 2em;
 }
 
 .wind {

@@ -105,10 +105,22 @@ a {
 
 .date {
   grid-column: 1 / 2;
+
+  &__day {
+    font-size: var(--fs-h2);
+    margin: 0;
+    color: var(--clr-gray);
+    font-weight: var(--fw-light);
+  }
 }
 
 .temp {
+  --border: solid 0.25em var(--clr-accent-dark);
   grid-column: 2 / 3;
+  border-left: var(--border);
+  border-right: var(--border);
+  // The reason it looks all right for the .wind is because the gap is also 2em.
+  padding: 0 2em;
 }
 
 .wind {
