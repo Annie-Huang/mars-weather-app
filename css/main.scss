@@ -143,6 +143,9 @@ a {
     // e.g. width: calc(50% - #{variables.$BASE_MEASURE} * 4);
     height: calc(var(--size) * 3);
     background-color: var(--clr-accent-dark);
+
+    // top, left bottom, right bottom. Start point is top left corner
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
   }
 }
 

@@ -5,5 +5,7 @@ https://github.com/Annie-Huang/mars-weather-app
 
 https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
 (Hiding Content Visually section)
+
+Clip-path maker: https://bennettfeely.com/clippy/
 =============================================================
 C:\react\mars-weather-app>npm init -y
