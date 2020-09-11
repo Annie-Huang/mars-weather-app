@@ -125,6 +125,25 @@ a {
 
 .wind {
   grid-column: 3 / 4;
+
+  &__direction {
+    --size: 5rem;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  &__arrow {
+    /* update Custom Props in JS to update the direction */
+    --direction: 0deg;
+    --size: 1rem;
+    width: var(--size);
+    // Custom property can used directly in calc, as was import property you will need to do #:
+    // e.g. width: calc(50% - #{variables.$BASE_MEASURE} * 4);
+    height: calc(var(--size) * 3);
+    background-color: var(--clr-accent-dark);
+  }
 }
 
 .info {
