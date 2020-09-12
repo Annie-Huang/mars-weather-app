@@ -214,6 +214,7 @@ a {
 
     // this is the same as border-radius: 10000px. It will always give you a nice pill
     border-radius: 100vmax;
+    margin: 0 0.5em;
 
     &::before {
       content: '';
@@ -227,7 +228,10 @@ a {
   }
 }
 
-
+// ~ means direct sibling
+:checked ~ .unit__toggle {
+  border-color: red;
+}
 
 
 
