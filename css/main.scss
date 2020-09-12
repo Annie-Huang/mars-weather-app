@@ -275,11 +275,11 @@ a {
 
 .show-previous-weather-label {
   position: absolute;
-  background: limegreen;
+  background: var(--clr-light);
 
   // The following two setting is the reason that it is placed in the middle
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -100%);
 
   width: 10rem;
   text-align: center;
