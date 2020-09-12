@@ -285,6 +285,9 @@ a {
   text-align: center;
   font-size: var(--fs-h2);
   line-height: 1;
+
+  // top, left bottom, right bottom. Start point is top left corner
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
 
 .previous-days {

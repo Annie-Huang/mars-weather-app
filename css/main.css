@@ -217,6 +217,7 @@ a:hover {
   text-align: center;
   font-size: var(--fs-h2);
   line-height: 1;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
 
 .previous-days {
