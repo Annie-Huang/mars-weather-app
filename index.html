@@ -53,9 +53,12 @@
 
   <div class="unit">
     <label for="cel">°C</label>
+    <!-- Adding class="sr-only" will not work because when label is clicked, <input> become active -->
     <input type="radio" name="unit" id="cel" checked>
+
     <!-- When unit_toggle is clicked, checkbox needs to change  -->
     <button class="unit__toggle"></button>
+
     <label for="fah">°F</label>
     <input type="radio" name="unit" id="fah">
   </div>
