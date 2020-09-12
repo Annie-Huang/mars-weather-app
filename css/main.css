@@ -129,13 +129,13 @@ a:hover {
 }
 .wind__arrow {
   /* update Custom Props in JS to update the direction */
-  --direction: 0deg;
+  --direction: 45deg;
   --size: 1rem;
   height: calc(var(--size) * 3);
   width: var(--size);
   background-color: var(--clr-accent-dark);
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
-  transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(var(--direction));
   transform-origin: bottom center;
   transition: transform 500ms ease;
 }

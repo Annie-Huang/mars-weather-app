@@ -139,7 +139,7 @@ a {
 
   &__arrow {
     /* update Custom Props in JS to update the direction */
-    --direction: 0deg;
+    --direction: 45deg;
     --size: 1rem;
 
     // Custom property can used directly in calc, as was import property you will need to do #:
@@ -152,7 +152,7 @@ a {
     // top, left bottom, right bottom. Start point is top left corner
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
 
-    transform: translateY(-50%) rotate(45deg); // Move the arrow up and rotate 45degree from triangle center.
+    transform: translateY(-50%) rotate(var(--direction)); // Move the arrow up and rotate 45degree from triangle center.
 
     // rotate from bottom center rather than center of the triangle
     // It's very important to rotation from bottom center because it makes the triangle looks like the clock minute hand.
