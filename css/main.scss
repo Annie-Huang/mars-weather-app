@@ -301,14 +301,24 @@ a {
     outline: 0;
     color: var(--clr-dark);
   }
+
+  span {
+    display: block;
+    transform: rotate(0);
+    transition: transform 300ms ease;
+  }
 }
 
 .previous-days {
   display: flex;
 }
 
-.show-weather {
+.show-weather.previous-weather {
   transform: translateY(0);
+
+  .show-previous-weather span {
+    transform: rotate(180deg) translateY(-6px);
+  }
 }
 
 
