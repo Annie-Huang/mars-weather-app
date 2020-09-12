@@ -285,7 +285,11 @@ a {
 
   // The following two setting is the reason that it is placed in the middle
   left: 50%;
-  transform: translate(-50%, calc(-100% - 3rem)); // should not use em because the current font-size: var(--fs-h2);
+  // should not use em because the current font-size: var(--fs-h2);
+  // Speical Note: I hate this.
+  // But I don't know why. It seem there is a visiable thin gap between the .show-previous-weather and .previous-weather
+  // And I have to put 1px to over the triangle on top of the previu
+  transform: translate(-50%, calc(-100% - 3rem + 1px));
 
   width: 10rem;
   text-align: center;
@@ -300,6 +304,7 @@ a {
 
   // Adjustment after switch from checkbox to button
   border: 0;
+  padding: 0;
   font-family: inherit;
   &:hover,
   &:focus {
