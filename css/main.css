@@ -205,6 +205,18 @@ a:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
+  transform: translateY(60%);
+}
+
+.show-previous-weather-label {
+  position: absolute;
+  background: limegreen;
+  left: 50%;
+  transform: translate(-50%);
+  width: 10rem;
+  text-align: center;
+  font-size: var(--fs-h2);
+  line-height: 1;
 }
 
 .previous-days {
