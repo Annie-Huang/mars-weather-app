@@ -208,6 +208,7 @@ a {
     width: 4em; // Don't need to give the height as the pseudo class is going to populate it.
     border: 2px solid var(--clr-gray);
     background: transparent;
+    padding: 0; // get rid of the default agent padding for <button>
 
     &::before {
       content: '';
