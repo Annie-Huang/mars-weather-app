@@ -264,8 +264,17 @@ a {
 
 
 
+.previous-weather {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
-
+.previous-days {
+  display: flex;
+}
 
 
 
