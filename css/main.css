@@ -176,10 +176,11 @@ a:hover {
   height: 1rem;
   width: 1rem;
   margin: 3px;
+  margin-left: auto;
 }
 
-:checked ~ .unit__toggle {
-  border-color: red;
+:checked ~ .unit__toggle::before {
+  margin-left: 3px;
 }
 
 /*# sourceMappingURL=main.css.map */

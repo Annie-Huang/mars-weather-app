@@ -224,13 +224,19 @@ a {
       height: 1rem;
       width: 1rem;
       margin: 3px;
+
+      // margin-left: auto means The left margin receives a share of the unused horizontal space,
+      //              as determined mainly by the layout mode that is used.
+      // Note: I personally don't like this approach because I think for toggle button, it should be
+      //       clicked on the toggle container rather than on the label.
+      margin-left: auto;
     }
   }
 }
 
 // ~ means direct sibling
-:checked ~ .unit__toggle {
-  border-color: red;
+:checked ~ .unit__toggle::before {
+  margin-left: 3px;
 }
 
 
