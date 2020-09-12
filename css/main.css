@@ -224,8 +224,9 @@ a:hover {
   border: 0;
   font-family: inherit;
 }
-.show-previous-weather-label:focus {
+.show-previous-weather-label:hover, .show-previous-weather-label:focus {
   outline: 0;
+  color: var(--clr-dark);
 }
 
 .previous-days {
