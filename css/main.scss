@@ -272,7 +272,11 @@ a {
   width: 100%;
   transform: translateY(60%);
   transition: transform 350ms ease;
-  padding: 3em;
+
+  // Don't use em.
+  // While em is relative to the font-size of its direct or nearest parent, rem is only relative to the html (root) font-size.
+  // Even though em and rem are the same at this level, but in line 289, it is different because the parent font-size is differnt from here.
+  padding: 3rem;
 }
 
 .show-previous-weather {
@@ -281,7 +285,7 @@ a {
 
   // The following two setting is the reason that it is placed in the middle
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, calc(-100% - 3rem)); // should not use em because the current font-size: var(--fs-h2);
 
   width: 10rem;
   text-align: center;

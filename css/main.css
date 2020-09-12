@@ -207,14 +207,14 @@ a:hover {
   width: 100%;
   transform: translateY(60%);
   transition: transform 350ms ease;
-  padding: 3em;
+  padding: 3rem;
 }
 
 .show-previous-weather {
   position: absolute;
   background: var(--clr-light);
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, calc(-100% - 3rem));
   width: 10rem;
   text-align: center;
   font-size: var(--fs-h2);
