@@ -271,6 +271,7 @@ a {
   bottom: 0;
   width: 100%;
   transform: translateY(60%);
+  transition: transform 350ms ease;
 }
 
 .show-previous-weather-label {
@@ -288,12 +289,18 @@ a {
 
   // top, left bottom, right bottom. Start point is top left corner
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
+
+  cursor: pointer;
+  color: var(--clr-gray);
 }
 
 .previous-days {
   display: flex;
 }
 
+.show-weather {
+  transform: translateY(0);
+}
 
 
 
