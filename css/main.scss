@@ -236,7 +236,7 @@ a {
 
     // this is the same as border-radius: 10000px. It will always give you a nice pill
     border-radius: 100vmax;
-    margin: 0 0.5em;
+    margin: 0 1em;
 
     &::before {
       content: '';

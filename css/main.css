@@ -183,7 +183,7 @@ a:hover {
   background: transparent;
   padding: 0;
   border-radius: 100vmax;
-  margin: 0 0.5em;
+  margin: 0 1em;
 }
 .unit__toggle::before {
   content: "";
