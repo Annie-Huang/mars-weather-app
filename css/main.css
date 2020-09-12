@@ -164,6 +164,7 @@ a:hover {
   border: 2px solid var(--clr-gray);
   background: transparent;
   padding: 0;
+  border-radius: 100vmax;
 }
 .unit__toggle::before {
   content: "";

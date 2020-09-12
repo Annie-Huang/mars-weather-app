@@ -210,6 +210,9 @@ a {
     background: transparent;
     padding: 0; // get rid of the default agent padding for <button>
 
+    // this is the same as border-radius: 10000px. It will always give you a nice pill
+    border-radius: 100vmax;
+
     &::before {
       content: '';
       display: block;
