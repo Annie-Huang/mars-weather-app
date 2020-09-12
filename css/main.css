@@ -209,7 +209,7 @@ a:hover {
   transition: transform 350ms ease;
 }
 
-.show-previous-weather-label {
+.show-previous-weather {
   position: absolute;
   background: var(--clr-light);
   left: 50%;
@@ -224,7 +224,7 @@ a:hover {
   border: 0;
   font-family: inherit;
 }
-.show-previous-weather-label:hover, .show-previous-weather-label:focus {
+.show-previous-weather:hover, .show-previous-weather:focus {
   outline: 0;
   color: var(--clr-dark);
 }
