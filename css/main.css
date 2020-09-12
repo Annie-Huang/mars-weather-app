@@ -119,14 +119,13 @@ a:hover {
   grid-column: 3/4;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 .wind .section-title,
 .wind .reading {
   grid-column: 2/3;
 }
 .wind__direction {
-  grid-row: 1/-1;
+  grid-row: 1/span 2;
   --size: 6rem;
   width: var(--size);
   height: var(--size);

@@ -136,8 +136,9 @@ a {
 
   grid-template-columns: repeat(2, 1fr);
 
-  // SPECIAL NOTES: if you want to use 1 / -1 in line 150:
-  grid-template-rows: repeat(2, 1fr);
+  // SPECIAL NOTES: if you want to use 1 / -1 in line 151:
+  // This is the different between implicit vs explicit grid
+  //grid-template-rows: repeat(2, 1fr);
 
   .section-title,
   .reading {
@@ -147,10 +148,10 @@ a {
   &__direction {
     // This is for the parent
     // Method 2 to move wind__direction into the first slot is:
-    //grid-row: 1 / span 2;
+    grid-row: 1 / span 2;
 
-    // SPECIAL NOTES: if you want to use 1 / -1 here you need to set grid-template-rows (line 140):
-    grid-row: 1 / -1;
+    // SPECIAL NOTES: if you want to use 1 / -1 here you need to set grid-template-rows (line 141):
+    //grid-row: 1 / -1;
 
 
     --size: 6rem;
