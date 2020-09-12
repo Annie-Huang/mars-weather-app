@@ -241,11 +241,19 @@ a:hover {
   justify-content: space-between;
 }
 
+.previous-day {
+  opacity: 0;
+  transition: opacity 350ms linear;
+}
+
 .show-weather.previous-weather {
   transform: translateY(0);
 }
 .show-weather.previous-weather .show-previous-weather span {
   transform: rotate(180deg) translateY(-6px);
+}
+.show-weather.previous-weather .previous-day {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
