@@ -292,6 +292,13 @@ a {
 
   cursor: pointer;
   color: var(--clr-gray);
+
+  // Adjustment after switch from checkbox to button
+  border: 0;
+  font-family: inherit;
+  &:focus {
+    outline: 0;
+  }
 }
 
 .previous-days {
