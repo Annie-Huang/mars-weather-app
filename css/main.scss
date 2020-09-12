@@ -210,6 +210,10 @@ a {
     opacity: 1;
   }
 
+  label {
+    cursor: pointer;
+  }
+
   &__toggle {
     cursor: pointer;
     width: 4em; // Don't need to give the height as the pseudo class is going to populate it.
@@ -237,12 +241,14 @@ a {
       margin-left: auto;
     }
   }
+
+  // ~ means direct sibling
+  :checked ~ .unit__toggle::before {
+    margin-left: 3px;
+  }
 }
 
-// ~ means direct sibling
-:checked ~ .unit__toggle::before {
-  margin-left: 3px;
-}
+
 
 
 

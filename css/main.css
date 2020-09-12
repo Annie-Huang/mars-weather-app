@@ -163,6 +163,9 @@ a:hover {
 .unit:hover {
   opacity: 1;
 }
+.unit label {
+  cursor: pointer;
+}
 .unit__toggle {
   cursor: pointer;
   width: 4em;
@@ -182,8 +185,7 @@ a:hover {
   margin: 3px;
   margin-left: auto;
 }
-
-:checked ~ .unit__toggle::before {
+.unit :checked ~ .unit__toggle::before {
   margin-left: 3px;
 }
 
