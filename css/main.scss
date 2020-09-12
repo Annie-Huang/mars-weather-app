@@ -201,6 +201,23 @@ a {
 .unit {
   grid-column: 3 / 4;
   place-self: end; // Will place it at the bottom right corner
+  color: var(--clr-gray);
+
+  &__toggle {
+    cursor: pointer;
+    width: 4em; // Don't need to give the height as the pseudo class is going to populate it.
+    border: 2px solid var(--clr-gray);
+    background: transparent;
+
+    &::before {
+      content: '';
+      display: block;
+      background: var(--clr-gray);
+      border-radius: 50%;
+      height: 1rem;
+      width: 50%;
+    }
+  }
 }
 
 

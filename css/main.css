@@ -156,6 +156,21 @@ a:hover {
 .unit {
   grid-column: 3/4;
   place-self: end;
+  color: var(--clr-gray);
+}
+.unit__toggle {
+  cursor: pointer;
+  width: 4em;
+  border: 2px solid var(--clr-gray);
+  background: transparent;
+}
+.unit__toggle::before {
+  content: "";
+  display: block;
+  background: var(--clr-gray);
+  border-radius: 50%;
+  height: 1rem;
+  width: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */
