@@ -156,13 +156,17 @@ a:hover {
 .unit {
   grid-column: 3/4;
   place-self: end;
-  color: var(--clr-gray);
+  color: var(--clr-light);
+  opacity: 0.7;
   display: flex;
+}
+.unit:hover {
+  opacity: 1;
 }
 .unit__toggle {
   cursor: pointer;
   width: 4em;
-  border: 2px solid var(--clr-gray);
+  border: 2px solid var(--clr-light);
   background: transparent;
   padding: 0;
   border-radius: 100vmax;
@@ -171,7 +175,7 @@ a:hover {
 .unit__toggle::before {
   content: "";
   display: block;
-  background: var(--clr-gray);
+  background: var(--clr-light);
   border-radius: 50%;
   height: 1rem;
   width: 1rem;

@@ -201,14 +201,19 @@ a {
 .unit {
   grid-column: 3 / 4;
   place-self: end; // Will place it at the bottom right corner
-  color: var(--clr-gray);
+  color: var(--clr-light);
+  opacity: 0.7;
 
   display: flex; // without flex label will align with button for bottom
+
+  &:hover {
+    opacity: 1;
+  }
 
   &__toggle {
     cursor: pointer;
     width: 4em; // Don't need to give the height as the pseudo class is going to populate it.
-    border: 2px solid var(--clr-gray);
+    border: 2px solid var(--clr-light);
     background: transparent;
     padding: 0; // get rid of the default agent padding for <button>
 
@@ -219,7 +224,7 @@ a {
     &::before {
       content: '';
       display: block;
-      background: var(--clr-gray);
+      background: var(--clr-light);
       border-radius: 50%;
       height: 1rem;
       width: 1rem;
