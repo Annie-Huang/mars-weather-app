@@ -272,6 +272,7 @@ a {
   width: 100%;
   transform: translateY(60%);
   transition: transform 350ms ease;
+  padding: 3em;
 }
 
 .show-previous-weather {
@@ -311,6 +312,7 @@ a {
 
 .previous-days {
   display: flex;
+  justify-content: space-between;
 }
 
 .show-weather.previous-weather {
