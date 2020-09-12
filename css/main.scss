@@ -126,13 +126,33 @@ a {
 .wind {
   grid-column: 3 / 4;
 
+  // This is perfect example why you will choose grid over flexbox: because you don't need to wrap
+  // .section-title and .reading into another div for positioning through flexbox
+  display: grid;
+
+  // We want to keep the order of the html to be title first, then reading, then wind__direction because it make sense for reading and maintenance.
+  // Method 1 to move wind__direction into the first slot is: grid-auto-flow. It means you cannot leave any slot empty.
+  //grid-auto-flow: dense;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  .section-title,
+  .reading {
+    grid-column: 2 / 3;
+  }
+
   &__direction {
+    // This is for the parent
+    // Method 2 to move wind__direction into the first slot is:
+    grid-row: 1 / span 2;
+
     --size: 6rem;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
     background-color: rgba(255,255,255,0.5);
 
+    // This is for itself and its children
     display: grid;
     place-items: center;
   }
