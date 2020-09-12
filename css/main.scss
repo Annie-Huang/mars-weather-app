@@ -200,6 +200,7 @@ a {
 
 .unit {
   grid-column: 3 / 4;
+  place-self: end; // Will place it at the bottom right corner
 }
 
 

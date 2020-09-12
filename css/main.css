@@ -155,6 +155,7 @@ a:hover {
 
 .unit {
   grid-column: 3/4;
+  place-self: end;
 }
 
 /*# sourceMappingURL=main.css.map */
