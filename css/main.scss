@@ -203,6 +203,8 @@ a {
   place-self: end; // Will place it at the bottom right corner
   color: var(--clr-gray);
 
+  display: flex; // without flex label will align with button for bottom
+
   &__toggle {
     cursor: pointer;
     width: 4em; // Don't need to give the height as the pseudo class is going to populate it.

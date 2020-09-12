@@ -157,6 +157,7 @@ a:hover {
   grid-column: 3/4;
   place-self: end;
   color: var(--clr-gray);
+  display: flex;
 }
 .unit__toggle {
   cursor: pointer;
