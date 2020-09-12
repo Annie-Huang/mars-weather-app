@@ -140,6 +140,9 @@ a {
   // This is the different between implicit vs explicit grid
   //grid-template-rows: repeat(2, 1fr);
 
+  grid-template-rows: min-content 1fr;
+  align-self: start;
+
   .section-title,
   .reading {
     grid-column: 2 / 3;
