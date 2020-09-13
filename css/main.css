@@ -264,6 +264,9 @@ a:hover {
 .show-weather.previous-weather .previous-weather__title {
   text-align: left;
 }
+.show-weather.previous-weather .previous-day > * {
+  margin: 0;
+}
 .show-weather.previous-weather .previous-day:nth-child(1) {
   animation-delay: 100ms;
 }
