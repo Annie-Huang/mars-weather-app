@@ -9,9 +9,18 @@ previousWeatherToggle.addEventListener('click', () => {
   previousWeather.classList.toggle('show-weather');
 })
 
+let selectedSolIndex;
+
 getWeather().then(sols => {
   console.log(sols);
+  selectedSolIndex = sols.length - 1;
+  displaySelectedSol(sols);
 });
+
+function displaySelectedSol(sols) {
+  const selectedSol = sols[selectedSolIndex];
+  console.log(selectedSol);
+}
 
 function getWeather() {
   return fetch(API_URL)
@@ -24,8 +33,8 @@ function getWeather() {
         ...solData
       } = data;
 
-      console.log(data);
-      console.log(solData);
+      // console.log(data);
+      // console.log(solData);
 
       // https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
       // AT: atmospheric temperature
