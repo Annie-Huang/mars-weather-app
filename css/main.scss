@@ -340,6 +340,8 @@ a {
   // Not sure why it has to changed to animation as it is triggered by a trigger (unlike page load) so it can be done with transition
   //transition: opacity 350ms linear;
 
+  & > * {margin: 0;}
+
   &__date {
     font-size: 0.9rem;
     color: var(--clr-gray);
@@ -353,6 +355,7 @@ a {
     color: var(--clr-light);
     text-transform: uppercase;
     padding: 0.3em 1em;
+    margin-top: 1em;
 
     &:hover,
     &:focus {
@@ -377,8 +380,6 @@ a {
   .previous-weather__title {
     text-align: left;
   }
-
-  .previous-day > * {margin: 0}
 
   .previous-day:nth-child(1) {animation-delay: 100ms}
   .previous-day:nth-child(2) {animation-delay: 125ms}
