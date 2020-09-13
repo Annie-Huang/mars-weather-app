@@ -324,6 +324,10 @@ a {
   justify-content: space-between;
 }
 
+.previous-weather__title {
+  text-align: center;
+}
+
 .previous-day {
   opacity: 0;
   transition: opacity 350ms linear;
@@ -338,6 +342,10 @@ a {
 
   .previous-day {
     opacity: 1;
+  }
+
+  .previous-weather__title {
+    text-align: left;
   }
 }
 

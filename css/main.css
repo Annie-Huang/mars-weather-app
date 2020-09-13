@@ -241,6 +241,10 @@ a:hover {
   justify-content: space-between;
 }
 
+.previous-weather__title {
+  text-align: center;
+}
+
 .previous-day {
   opacity: 0;
   transition: opacity 350ms linear;
@@ -254,6 +258,9 @@ a:hover {
 }
 .show-weather.previous-weather .previous-day {
   opacity: 1;
+}
+.show-weather.previous-weather .previous-weather__title {
+  text-align: left;
 }
 
 /*# sourceMappingURL=main.css.map */
