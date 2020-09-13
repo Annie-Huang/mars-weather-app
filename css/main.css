@@ -250,6 +250,10 @@ a:hover {
 .previous-day {
   opacity: 0;
 }
+.previous-day__date {
+  font-size: 0.9rem;
+  color: var(--clr-gray);
+}
 
 .show-weather.previous-weather {
   transform: translateY(0);

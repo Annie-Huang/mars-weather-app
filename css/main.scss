@@ -339,6 +339,11 @@ a {
 
   // Not sure why it has to changed to animation as it is triggered by a trigger (unlike page load) so it can be done with transition
   //transition: opacity 350ms linear;
+
+  &__date {
+    font-size: 0.9rem;
+    color: var(--clr-gray);
+  }
 }
 
 .show-weather.previous-weather {
