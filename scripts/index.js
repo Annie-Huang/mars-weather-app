@@ -23,8 +23,23 @@ function getWeather() {
       } = data;
 
       console.log(data);
-      console.log(sol_keys);
+      console.log(solData);
 
+      // https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
+      // AT: atmospheric temperature
+      // HWS: horizontal wind speed. av: average
+      // WD: wind direction
+      // First_UTC: Time of first datum
+      const temp = Object.entries(solData).map(([sol, data]) => ({ // [sol, data] is the [key value] set of the entry
+        sol: sol,
+        maxTemp: data.AT.mx,
+        minTemp: data.AT.mn,
+        windSpeed: data.HWS ? data.HWS.av : 0,
+        windDirectionDegrees: data.WD.most_common? data.WD.most_common.compass_degrees : 0,
+        windDirectionCardinal: data.WD.most_common? data.WD.most_common.compass_point : '',
+        date: new Date(data.First_UTC)
+      }))
+      console.log(temp);
     })
 }
 
