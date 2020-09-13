@@ -50,6 +50,7 @@ body {
   height: 100vh;
   overflow: hidden;
   color: var(--clr-light);
+  position: relative;
 }
 
 h1, h2, h3 {
