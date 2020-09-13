@@ -6,9 +6,18 @@ Creating a Mars Weather App - HTML & CSS part 1 (https://www.youtube.com/watch?v
 Creating a Mars Weather App - HTML & CSS part 2 (https://www.youtube.com/watch?v=LLsrgqnFet0)
 Creating a Mars Weather App - HTML & CSS part 3 (https://www.youtube.com/watch?v=KFKF1baf8mY)
 Creating a Mars Weather App - HTML & CSS part 4 (https://www.youtube.com/watch?v=pcYbAzSfC5I)
+How To Build A Mars Weather App (https://www.youtube.com/watch?v=MDENx86nK4k)
+
 
 https://github.com/kevin-powell/Mars-Weather-App
 https://github.com/Annie-Huang/mars-weather-app
+
+
+https://api.nasa.gov/       <<< Go to "Insight: Mars Weather Service API" section
+https://mars.nasa.gov/insight/weather/
+https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
+https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0
+
 
 https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
 (Hiding Content Visually section)
