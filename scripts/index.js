@@ -29,7 +29,7 @@ function displaySelectedSol(sols) {
   const selectedSol = sols[selectedSolIndex];
   // console.log(selectedSol);
   currentSolElement.innerText = selectedSol.sol;
-  currentDateElement.innerText = selectedSol.date;
+  currentDateElement.innerText = displayDate(selectedSol.date);
   currentTempHighElement.innerText = selectedSol.maxTemp;
   currentTempLowElement.innerText = selectedSol.minTemp;
   windSpeedElement.innerText = selectedSol.windSpeed;
@@ -37,6 +37,16 @@ function displaySelectedSol(sols) {
   windDirectionArrow.style.setProperty('--direction', `${selectedSol.windDirectionDegrees}deg`);
 
   windDirectionText.innerText = selectedSol.windDirectionCardinal;
+}
+
+function displayDate(date) {
+  // The first param is the locale or language you want to use,
+  // or use undefined, which will take info base on user's browser and what default they set
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+  return date.toLocaleString(
+    undefined,
+    {day: 'numeric', month: 'long'}
+  )
 }
 
 function getWeather() {
