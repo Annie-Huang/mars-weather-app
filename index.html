@@ -21,23 +21,23 @@
   <h1 class="main-title">Latest weather at Elysium Plantitia</h1>
 
   <div class="date">
-    <h2 class="section-title section-title--date">Sol 377</h2>
-    <p class="date__day">September 31</p>
+    <h2 class="section-title section-title--date">Sol <span data-current-sol></span></h2>
+    <p class="date__day" data-current-date></p>
   </div>
 
   <div class="temp">
     <h2 class="section-title">Temperature</h2>
-    <p class="reading">High: -20°C</p>
-    <p class="reading">Low: -120°C</p>
+    <p class="reading">High: <span data-current-temp-high></span>°C</p>
+    <p class="reading">Low: <span data-current-temp-low></span>°C</p>
   </div>
   <div class="wind">
     <h2 class="section-title">Wind</h2>
-    <p class="reading">75kph</p>
+    <p class="reading"><span data-wind-speed></span>kph</p>
 
     <div class="wind__direction">
-      <p class="sr-only">45deg</p>
+      <p class="sr-only">data-wind-direction-text</p>
       <!-- update --direction custom prop to change arrow direction -->
-      <div class="wind__arrow"></div>
+      <div class="wind__arrow" data-wind-direction-arrow></div>
     </div>
   </div>
 
