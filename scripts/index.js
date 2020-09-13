@@ -15,7 +15,16 @@ function getWeather() {
   fetch(API_URL)
     .then(res => res.json())
     .then(data => {
+
+      const {
+        sol_keys,
+        validity_checks,
+        ...solData
+      } = data;
+
       console.log(data);
+      console.log(sol_keys);
+
     })
 }
 
