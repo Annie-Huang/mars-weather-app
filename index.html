@@ -21,22 +21,25 @@
   <h1 class="main-title">Latest weather at Elysium Plantitia</h1>
 
   <div class="date">
-    <h2 class="section-title section-title--date">Sol <span data-current-sol></span></h2>
-    <p class="date__day" data-current-date></p>
+    <h2 class="section-title section-title--date">Sol <span data-current-sol /></h2>
+    <p class="date__day" data-current-date />
   </div>
 
   <div class="temp">
     <h2 class="section-title">Temperature</h2>
-    <p class="reading">High: <span data-current-temp-high></span>°C</p>
-    <p class="reading">Low: <span data-current-temp-low></span>°C</p>
+    <p class="reading">High: <span data-current-temp-high />°C</p>
+    <p class="reading">Low: <span data-current-temp-low />°C</p>
   </div>
   <div class="wind">
     <h2 class="section-title">Wind</h2>
-    <p class="reading"><span data-wind-speed></span>kph</p>
+    <p class="reading"><span data-wind-speed />kph</p>
 
     <div class="wind__direction">
-      <p class="sr-only">data-wind-direction-text</p>
+      <p class="sr-only" data-wind-direction-text />
       <!-- update --direction custom prop to change arrow direction -->
+      <!-- For some reason, cannot change it to <div class="wind__arrow" data-wind-direction-arrow />
+           The .info section will got shifted into .wind section
+      -->
       <div class="wind__arrow" data-wind-direction-arrow></div>
     </div>
   </div>
