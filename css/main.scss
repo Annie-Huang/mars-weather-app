@@ -336,7 +336,9 @@ a {
 
 .previous-day {
   opacity: 0;
-  transition: opacity 350ms linear;
+
+  // Not sure why it has to changed to animation as it is triggered by a trigger (unlike page load) so it can be done with transition
+  //transition: opacity 350ms linear;
 }
 
 .show-weather.previous-weather {
@@ -347,7 +349,8 @@ a {
   }
 
   .previous-day {
-    opacity: 1;
+    //opacity: 1;
+    animation: slideUpIn 750ms forwards;
   }
 
   .previous-weather__title {
@@ -355,7 +358,17 @@ a {
   }
 }
 
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%); // This gave the effect the the .previous-day is slide up within the panel as well
+  }
 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 

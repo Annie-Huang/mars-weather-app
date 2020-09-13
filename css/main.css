@@ -249,7 +249,6 @@ a:hover {
 
 .previous-day {
   opacity: 0;
-  transition: opacity 350ms linear;
 }
 
 .show-weather.previous-weather {
@@ -259,10 +258,21 @@ a:hover {
   transform: rotate(180deg) translateY(-6px);
 }
 .show-weather.previous-weather .previous-day {
-  opacity: 1;
+  animation: slideUpIn 750ms forwards;
 }
 .show-weather.previous-weather .previous-weather__title {
   text-align: left;
+}
+
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
