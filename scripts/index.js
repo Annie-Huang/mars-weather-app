@@ -13,6 +13,10 @@ const windSpeedElement = document.querySelector('[data-wind-speed]');
 const windDirectionText = document.querySelector('[data-wind-direction-text]');
 const windDirectionArrow = document.querySelector('[data-wind-direction-arrow]');
 
+const previousSolTemplate = document.querySelector('[data-previous-sol-template]');
+const previousSolContainer = document.querySelector('[data-previous-sols]');
+
+
 previousWeatherToggle.addEventListener('click', () => {
   previousWeather.classList.toggle('show-weather');
 })
@@ -24,7 +28,9 @@ getWeather().then(sols => {
   selectedSolIndex = sols.length - 1;
   // TODO: Will change later but for now I want data for the .wind section
   // selectedSolIndex = 0;
+
   displaySelectedSol(sols);
+  displayPreviousSols(sols);
 });
 
 function displaySelectedSol(sols) {
@@ -35,10 +41,12 @@ function displaySelectedSol(sols) {
   currentTempHighElement.innerText = displayTemperature(selectedSol.maxTemp);
   currentTempLowElement.innerText = displayTemperature(selectedSol.minTemp);
   windSpeedElement.innerText = displaySpeed(selectedSol.windSpeed);
-
   windDirectionArrow.style.setProperty('--direction', `${selectedSol.windDirectionDegrees}deg`);
-
   windDirectionText.innerText = selectedSol.windDirectionCardinal;
+}
+
+function displayPreviousSols(sols) {
+  previousSolContainer.innerHTML = '';
 }
 
 function displayDate(date) {
