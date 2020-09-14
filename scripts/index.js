@@ -50,6 +50,9 @@ function displayPreviousSols(sols) {
   sols.forEach((solData, index) => {
     const solContainer = previousSolTemplate.content.cloneNode(true);
     solContainer.querySelector('[data-sol]').innerText = solData.sol;
+    solContainer.querySelector('[data-date]').innerText = displayDate(solData.date);
+    solContainer.querySelector('[data-temp-high]').innerText = displayTemperature(solData.maxTemp);
+    solContainer.querySelector('[data-temp-low]').innerText = displayTemperature(solData.minTemp);
     previousSolContainer.appendChild(solContainer);
   });
 }
