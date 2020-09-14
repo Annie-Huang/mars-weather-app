@@ -22,6 +22,8 @@ let selectedSolIndex;
 getWeather().then(sols => {
   console.log(sols);
   selectedSolIndex = sols.length - 1;
+  // TODO: Will change later but for now I want data for the .wind section
+  // selectedSolIndex = 0;
   displaySelectedSol(sols);
 });
 
