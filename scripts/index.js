@@ -53,6 +53,11 @@ function displayPreviousSols(sols) {
     solContainer.querySelector('[data-date]').innerText = displayDate(solData.date);
     solContainer.querySelector('[data-temp-high]').innerText = displayTemperature(solData.maxTemp);
     solContainer.querySelector('[data-temp-low]').innerText = displayTemperature(solData.minTemp);
+    solContainer.querySelector('[data-select-button]').addEventListener('click', () => {
+      selectedSolIndex = index;
+      displaySelectedSol(sols);
+    });
+
     previousSolContainer.appendChild(solContainer);
   });
 }
