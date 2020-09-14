@@ -47,6 +47,11 @@ function displaySelectedSol(sols) {
 
 function displayPreviousSols(sols) {
   previousSolContainer.innerHTML = '';
+  sols.forEach((solData, index) => {
+    const solContainer = previousSolTemplate.content.cloneNode(true);
+    solContainer.querySelector('[data-sol]').innerText = solData.sol;
+    previousSolContainer.appendChild(solContainer);
+  });
 }
 
 function displayDate(date) {
