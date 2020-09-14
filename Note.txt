@@ -22,7 +22,12 @@ https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
 Clip-path maker: https://bennettfeely.com/clippy/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
 =============================================================
 C:\react\mars-weather-app>npm init -y
 
 A lot of the notes are adding as part of github checkin comment. Check it out there.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
+The HTML Content Template (<template>) element is a mechanism for holding HTML that is not to be
+rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
