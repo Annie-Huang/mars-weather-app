@@ -41,6 +41,8 @@ getWeather().then(sols => {
     let metricUnits = !isMetric();
     metricRadio.checked = metricUnits;
     imperialRadio.checked = !metricUnits;
+    displaySelectedSol(sols);
+    displayPreviousSols(sols);
     updateUnits();
 
 /*    // Don't to have use the above, the following will do.
@@ -49,9 +51,13 @@ getWeather().then(sols => {
   });
 
   metricRadio.addEventListener('change', () => {
+    displaySelectedSol(sols);
+    displayPreviousSols(sols);
     updateUnits();
   });
   imperialRadio.addEventListener('change', () => {
+    displaySelectedSol(sols);
+    displayPreviousSols(sols);
     updateUnits();
   });
 });
@@ -96,7 +102,12 @@ function displayDate(date) {
 }
 
 function displayTemperature(temperature) {
-  return Math.round(temperature);
+  let returnTemp = temperature;
+  if(!isMetric()) {
+    returnTemp = (temperature * 9/5) + 32;
+  }
+
+  return Math.round(returnTemp);
 }
 
 function displaySpeed(speed) {
@@ -114,7 +125,7 @@ function getWeather() {
         ...solData
       } = data;
 
-      // console.log(data);
+      console.log(data);
       // console.log(solData);
 
       // https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
