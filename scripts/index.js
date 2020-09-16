@@ -16,6 +16,9 @@ const windDirectionArrow = document.querySelector('[data-wind-direction-arrow]')
 const previousSolTemplate = document.querySelector('[data-previous-sol-template]');
 const previousSolContainer = document.querySelector('[data-previous-sols]');
 
+const unitToggle = document.querySelector('[data-unit-toggle]');
+const metricRadio = document.getElementById('cel');
+const imperialRadio = document.getElementById('fah');
 
 previousWeatherToggle.addEventListener('click', () => {
   previousWeather.classList.toggle('show-weather');
@@ -31,6 +34,16 @@ getWeather().then(sols => {
 
   displaySelectedSol(sols);
   displayPreviousSols(sols);
+
+  unitToggle.addEventListener('click', () => {
+    // let metricUnits = !metricRadio.checked;
+    // metricRadio.checked = metricUnits;
+    // imperialRadio.checked = !metricUnits;
+
+    // Don't to have use the above, the following will do.
+    // And don't need to change imperialRadio.checked because they belong to the same radio button group.
+    metricRadio.checked = !metricRadio.checked;
+  });
 });
 
 function displaySelectedSol(sols) {
