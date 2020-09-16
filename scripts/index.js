@@ -34,15 +34,17 @@ getWeather().then(sols => {
 
   displaySelectedSol(sols);
   displayPreviousSols(sols);
+  updateUnits();
 
   unitToggle.addEventListener('click', () => {
     // let metricUnits = !metricRadio.checked;
-    // metricRadio.checked = metricUnits;
-    // imperialRadio.checked = !metricUnits;
+    let metricUnits = !isMetric();
+    metricRadio.checked = metricUnits;
+    imperialRadio.checked = !metricUnits;
 
-    // Don't to have use the above, the following will do.
+/*    // Don't to have use the above, the following will do.
     // And don't need to change imperialRadio.checked because they belong to the same radio button group.
-    metricRadio.checked = !metricRadio.checked;
+    metricRadio.checked = !metricRadio.checked;*/
   });
 });
 
@@ -127,3 +129,17 @@ function getWeather() {
     })
 }
 
+function updateUnits() {
+  const speedUnits = document.querySelectorAll('[data-speed-unit]')
+  const tempUnits = document.querySelectorAll('[data-temp-unit]')
+  speedUnits.forEach(unit => {
+    unit.innerHTML = isMetric() ? 'kph': 'mph'
+  })
+  tempUnits.forEach(unit => {
+    unit.innerHTML = isMetric() ? 'C': 'F'
+  })
+}
+
+function isMetric() {
+  return metricRadio.checked;
+}
