@@ -187,6 +187,9 @@ a:hover {
   border-radius: 100vmax;
   margin: 0 1em;
 }
+.unit__toggle:focus {
+  outline: 0;
+}
 .unit__toggle::before {
   content: "";
   display: block;

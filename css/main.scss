@@ -244,6 +244,10 @@ a {
     border-radius: 100vmax;
     margin: 0 1em;
 
+    &:focus {
+      outline: 0;
+    }
+
     &::before {
       content: '';
       display: block;
