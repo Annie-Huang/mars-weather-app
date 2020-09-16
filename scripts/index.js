@@ -47,6 +47,13 @@ getWeather().then(sols => {
     // And don't need to change imperialRadio.checked because they belong to the same radio button group.
     metricRadio.checked = !metricRadio.checked;*/
   });
+
+  metricRadio.addEventListener('change', () => {
+    updateUnits();
+  });
+  imperialRadio.addEventListener('change', () => {
+    updateUnits();
+  });
 });
 
 function displaySelectedSol(sols) {
