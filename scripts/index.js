@@ -118,16 +118,16 @@ function getWeather() {
       // console.log(solData);
 
       // https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
-      // (°F for AT; m/s for HWS; Pa for PRE) TODO: Need to do conversion later...
-      // AT: atmospheric temperature
+      // (°F for AT; m/s for HWS; Pa for PRE)
+      // AT: atmospheric temperature (32°F − 32) × 5/9 = 0°C
       // HWS: horizontal wind speed. av: average. 1m/s = 3.6k/h
       // WD: wind direction
       // First_UTC: Time of first datum
       // const temp = Object.entries(solData).map(([sol, data]) => ({ // [sol, data] is the [key value] set of the entry
       return Object.entries(solData).map(([sol, data]) => ({ // [sol, data] is the [key value] set of the entry
         sol: sol,
-        maxTemp: data.AT.mx,
-        minTemp: data.AT.mn,
+        maxTemp: (data.AT.mx - 32) * 5/9,
+        minTemp: (data.AT.mn - 32) * 5/9,
         windSpeed: data.HWS ? data.HWS.av * 3.6 : 0,
         windDirectionDegrees: data.WD.most_common? data.WD.most_common.compass_degrees : 0,
         windDirectionCardinal: data.WD.most_common? data.WD.most_common.compass_point : '',
