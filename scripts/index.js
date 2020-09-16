@@ -106,12 +106,15 @@ function displayTemperature(temperature) {
   if(!isMetric()) {
     returnTemp = (temperature * 9/5) + 32;
   }
-
   return Math.round(returnTemp);
 }
 
 function displaySpeed(speed) {
-  return Math.round(speed);
+  let returnSpeed = speed;
+  if(!isMetric()) {
+    returnSpeed = speed / 1.609;
+  }
+  return Math.round(returnSpeed);
 }
 
 function getWeather() {
@@ -131,7 +134,7 @@ function getWeather() {
       // https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
       // (°F for AT; m/s for HWS; Pa for PRE)
       // AT: atmospheric temperature (32°F − 32) × 5/9 = 0°C
-      // HWS: horizontal wind speed. av: average. 1m/s = 3.6k/h
+      // HWS: horizontal wind speed. av: average. 1m/s = 3.6k/h. Keep in mind we are switching between kph and mph; Not kph and m/s
       // WD: wind direction
       // First_UTC: Time of first datum
       // const temp = Object.entries(solData).map(([sol, data]) => ({ // [sol, data] is the [key value] set of the entry
