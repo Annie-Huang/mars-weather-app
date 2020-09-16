@@ -41,6 +41,7 @@ getWeather().then(sols => {
     let metricUnits = !isMetric();
     metricRadio.checked = metricUnits;
     imperialRadio.checked = !metricUnits;
+    updateUnits();
 
 /*    // Don't to have use the above, the following will do.
     // And don't need to change imperialRadio.checked because they belong to the same radio button group.
