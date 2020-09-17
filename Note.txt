@@ -1,12 +1,12 @@
 Mars Weather App
 (https://www.youtube.com/playlist?list=PL4-IK0AVhVjNGp4eiFgbqWOwwVAH27oWF)
 
-
 Creating a Mars Weather App - HTML & CSS part 1 (https://www.youtube.com/watch?v=1-jQfGJibzc&t=121s)
 Creating a Mars Weather App - HTML & CSS part 2 (https://www.youtube.com/watch?v=LLsrgqnFet0)
 Creating a Mars Weather App - HTML & CSS part 3 (https://www.youtube.com/watch?v=KFKF1baf8mY)
 Creating a Mars Weather App - HTML & CSS part 4 (https://www.youtube.com/watch?v=pcYbAzSfC5I)
 How To Build A Mars Weather App (https://www.youtube.com/watch?v=MDENx86nK4k)
+Turning a design from desktop only to mobile friendly (https://www.youtube.com/watch?v=_kF3k0vDMNA)
 
 https://github.com/kevin-powell/Mars-Weather-App
 https://github.com/Annie-Huang/mars-weather-app
