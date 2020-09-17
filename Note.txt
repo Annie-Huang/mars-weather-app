@@ -31,3 +31,11 @@ A lot of the notes are adding as part of github checkin comment. Check it out th
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
 The HTML Content Template (<template>) element is a mechanism for holding HTML that is not to be
 rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
+
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+The above is important if you are doing responsive layout.
+
+
+@media (min-width: 900px)  --> Mobile first
+@media (max-width: 900px)  --> Desktop first.

@@ -47,9 +47,8 @@ body {
   line-height: 1.6;
   background-image: url(../img/mars.jpg);
   background-size: cover;
-  height: 100vh;
-  overflow: hidden;
   color: var(--clr-light);
+  min-height: 100vh;
   position: relative;
 }
 
@@ -205,6 +204,7 @@ a:hover {
 }
 
 .previous-weather {
+  display: none;
   background: var(--clr-light);
   color: var(--clr-dark);
   position: absolute;
@@ -317,6 +317,12 @@ a:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media (min-width: 900px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
   }
 }
 

@@ -52,10 +52,16 @@ body {
   line-height: 1.6;
   background-image: url(../img/mars.jpg);
   background-size: cover;
-  height: 100vh;
-  overflow: hidden;
+
+  // Move to media query
+  //height: 100vh;
+  //overflow: hidden;
+
   color: var(--clr-light);
-  //min-height: 100vh;
+
+  // Need to keep the min-heigh for mobile. E.g. when the content of the body is less than 100vh,
+  // the body will be less than 50vh, and the background image is double up again at the bottom.
+  min-height: 100vh;
   position: relative;
 }
 
@@ -275,6 +281,9 @@ a {
 
 
 .previous-weather {
+  // Temperately set it to none;
+  display: none;
+
   background: var(--clr-light);
   color: var(--clr-dark);
   position: absolute;
@@ -406,7 +415,12 @@ a {
   }
 }
 
-
+@media (min-width: 900px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 
 
 
