@@ -103,7 +103,7 @@ a {
 
 .mars-current-weather {
   background: rgba(0,0,0,0.7);
-  padding: 2em;
+  padding: 6em 2em 2em;
   max-width: 1000px;
 }
 
@@ -201,6 +201,13 @@ a {
 }
 
 .unit {
+  // This only work in SASS. It will not work in CSS.
+  @media (max-width: 900px) {
+    position: absolute;
+    left: 2em;
+    top: 2em;
+  }
+
   grid-column: 3 / 4;
   place-self: end; // Will place it at the bottom right corner
   color: var(--clr-light);
