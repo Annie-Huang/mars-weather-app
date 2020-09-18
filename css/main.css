@@ -9,10 +9,10 @@
   --fw-normal: 400;
   --fw-semi: 500;
   --fw-bold: 700;
-  --fs-h1: 1.5rem;
-  --fs-h2: 2.25rem;
+  --fs-h1: 1.25rem;
+  --fs-h2: 1.75rem;
   --fs-body: 1rem;
-  --fs-xl: 4.5rem;
+  --fs-xl: 4rem;
   --clr-light: #fff;
   --clr-gray: #989898;
   --clr-dark: #444;
@@ -316,6 +316,13 @@ a:hover {
   }
 }
 @media (min-width: 900px) {
+  :root {
+    --fs-h1: 1.5rem;
+    --fs-h2: 2.25rem;
+    --fs-body: 1rem;
+    --fs-xl: 4.5rem;
+  }
+
   body {
     height: 100vh;
     overflow: hidden;
