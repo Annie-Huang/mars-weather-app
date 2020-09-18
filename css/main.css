@@ -111,7 +111,6 @@ a:hover {
 }
 
 .wind {
-  grid-column: 3/4;
   display: grid;
   column-gap: 1em;
   grid-template-columns: min-content 1fr;
@@ -162,7 +161,7 @@ a:hover {
   .unit {
     position: absolute;
     left: 3em;
-    top: 2em;
+    top: 3em;
   }
 }
 .unit:hover {
@@ -362,6 +361,10 @@ a:hover {
     gap: 2em;
   }
 
+  .date {
+    grid-column: 1/2;
+  }
+
   .temp {
     grid-column: 2/3;
     border-left: var(--border);
@@ -369,6 +372,9 @@ a:hover {
     padding: 0 2em;
   }
 
+  .wind {
+    grid-column: 3/4;
+  }
   .wind .section-title,
 .wind .reading {
     grid-column: 2/3;
