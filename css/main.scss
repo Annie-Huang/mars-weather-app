@@ -105,6 +105,7 @@ a {
   background: rgba(0,0,0,0.7);
   padding: 6em 2em 2em;
   max-width: 1000px;
+  margin: 1em;
 }
 
 .date {
@@ -204,7 +205,7 @@ a {
   // This only work in SASS. It will not work in CSS.
   @media (max-width: 900px) {
     position: absolute;
-    left: 2em;
+    left: 3em;
     top: 2em;
   }
 
@@ -426,6 +427,7 @@ a {
   }
 
   .mars-current-weather {
+    padding: 2em;
     margin: 4em 0 0 4em; // not sure why he only want top and left margin?
     display: grid;
     grid-template-columns: repeat(3, 1fr);
