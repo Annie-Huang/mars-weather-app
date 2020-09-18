@@ -129,12 +129,13 @@ a {
   // This is perfect example why you will choose grid over flexbox: because you don't need to wrap
   // .section-title and .reading into another div for positioning through flexbox
   display: grid;
+  column-gap: 1em;
 
   // We want to keep the order of the html to be title first, then reading, then wind__direction because it make sense for reading and maintenance.
   // Method 1 to move wind__direction into the first slot is: grid-auto-flow. It means you cannot leave any slot empty.
   //grid-auto-flow: dense;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: min-content 1fr;
 
   // SPECIAL NOTES: if you want to use 1 / -1 in line 151:
   // This is the different between implicit vs explicit grid
@@ -145,10 +146,11 @@ a {
 
   .section-title,
   .reading {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
   }
 
   &__direction {
+    grid-column: 2 / 3;
     // This is for the parent
     // Method 2 to move wind__direction into the first slot is:
     grid-row: 1 / span 2;
@@ -157,7 +159,7 @@ a {
     //grid-row: 1 / -1;
 
 
-    --size: 6rem;
+    --size: 4rem;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
@@ -171,7 +173,7 @@ a {
   &__arrow {
     /* update Custom Props in JS to update the direction */
     --direction: 45deg;
-    --size: 1rem;
+    --size: 0.75rem;
 
     // Custom property can used directly in calc, as was import property you will need to do #:
     // e.g. width: calc(50% - #{variables.$BASE_MEASURE} * 4);
@@ -429,6 +431,38 @@ a {
     border-right: var(--border);
     // The reason it looks all right for the .wind is because the gap is also 2em.
     padding: 0 2em;
+  }
+
+  .wind {
+    .section-title,
+    .reading {
+      grid-column: 2 / 3;
+    }
+
+    &__direction {
+      grid-column: 1 / 2;
+      // This is for the parent
+      // Method 2 to move wind__direction into the first slot is:
+      grid-row: 1 / span 2;
+
+      // SPECIAL NOTES: if you want to use 1 / -1 here you need to set grid-template-rows (line 141):
+      //grid-row: 1 / -1;
+
+
+      --size: 6rem;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.5);
+
+      // This is for itself and its children
+      display: grid;
+      place-items: center;
+    }
+
+    &__arrow {
+      --size: 1rem;
+    }
   }
 }
 

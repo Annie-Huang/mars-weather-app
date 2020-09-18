@@ -112,17 +112,19 @@ a:hover {
 .wind {
   grid-column: 3/4;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
+  grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
   align-self: start;
 }
 .wind .section-title,
 .wind .reading {
-  grid-column: 2/3;
+  grid-column: 1/2;
 }
 .wind__direction {
+  grid-column: 2/3;
   grid-row: 1/span 2;
-  --size: 6rem;
+  --size: 4rem;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -133,7 +135,7 @@ a:hover {
 .wind__arrow {
   /* update Custom Props in JS to update the direction */
   --direction: 45deg;
-  --size: 1rem;
+  --size: 0.75rem;
   height: calc(var(--size) * 3);
   width: var(--size);
   background-color: var(--clr-accent-dark);
@@ -337,6 +339,25 @@ a:hover {
     border-left: var(--border);
     border-right: var(--border);
     padding: 0 2em;
+  }
+
+  .wind .section-title,
+.wind .reading {
+    grid-column: 2/3;
+  }
+  .wind__direction {
+    grid-column: 1/2;
+    grid-row: 1/span 2;
+    --size: 6rem;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: grid;
+    place-items: center;
+  }
+  .wind__arrow {
+    --size: 1rem;
   }
 }
 
