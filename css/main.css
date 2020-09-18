@@ -106,10 +106,7 @@ a:hover {
 
 .temp {
   --border: solid 0.25em var(--clr-accent-dark);
-  grid-column: 2/3;
-  border-left: var(--border);
-  border-right: var(--border);
-  padding: 0 2em;
+  padding: 2em 0;
 }
 
 .wind {
@@ -333,6 +330,13 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
+  }
+
+  .temp {
+    grid-column: 2/3;
+    border-left: var(--border);
+    border-right: var(--border);
+    padding: 0 2em;
   }
 }
 
