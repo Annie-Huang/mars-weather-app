@@ -483,16 +483,7 @@ a {
       // SPECIAL NOTES: if you want to use 1 / -1 here you need to set grid-template-rows (line 141):
       //grid-row: 1 / -1;
 
-
       --size: 6rem;
-      width: var(--size);
-      height: var(--size);
-      border-radius: 50%;
-      background-color: rgba(255,255,255,0.5);
-
-      // This is for itself and its children
-      display: grid;
-      place-items: center;
     }
 
     &__arrow {
