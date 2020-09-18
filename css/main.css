@@ -322,6 +322,26 @@ a:hover {
     transform: translateY(0);
   }
 }
+@media (min-width: 600px) {
+  .mars-current-weather {
+    display: grid;
+    row-gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .date {
+    grid-column: 1/-1;
+  }
+
+  .temp {
+    grid-column: 1/2;
+    padding: 0;
+  }
+
+  .wind {
+    grid-column: 2/3;
+  }
+}
 @media (min-width: 900px) {
   :root {
     --fs-h1: 1.5rem;
@@ -337,8 +357,7 @@ a:hover {
 
   .mars-current-weather {
     padding: 2em;
-    margin: 4em 0 0 4em;
-    display: grid;
+    margin: 4em 4em 0 4em;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
   }
