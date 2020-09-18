@@ -92,10 +92,6 @@ a:hover {
   background: rgba(0, 0, 0, 0.7);
   padding: 2em;
   max-width: 1000px;
-  margin: 4em 0 0 4em;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
 }
 
 .date {
@@ -323,6 +319,13 @@ a:hover {
   body {
     height: 100vh;
     overflow: hidden;
+  }
+
+  .mars-current-weather {
+    margin: 4em 0 0 4em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
   }
 }
 

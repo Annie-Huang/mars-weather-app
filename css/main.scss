@@ -108,11 +108,6 @@ a {
   background: rgba(0,0,0,0.7);
   padding: 2em;
   max-width: 1000px;
-  margin: 4em 0 0 4em; // not sure why he only want top and left margin?
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
 }
 
 .date {
@@ -419,6 +414,13 @@ a {
   body {
     height: 100vh;
     overflow: hidden;
+  }
+
+  .mars-current-weather {
+    margin: 4em 0 0 4em; // not sure why he only want top and left margin?
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
   }
 }
 
