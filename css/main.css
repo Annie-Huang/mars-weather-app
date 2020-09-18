@@ -206,7 +206,6 @@ a:hover {
 }
 
 .previous-weather {
-  display: none;
   background: var(--clr-light);
   color: var(--clr-dark);
   position: absolute;
